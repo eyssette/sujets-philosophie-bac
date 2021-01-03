@@ -22,7 +22,6 @@
             header: false,
             delimiter: "    ",
             complete: function(results) {
-                //console.log("Finished:", results.data);
                 rows = results.data;
                 title = rows[0][0].split('\t');
                 title.forEach(element => {
@@ -53,6 +52,7 @@
 <div id="recherches">
 <label for="recherche_dans_le_sujet">Rechercher dans le sujet :</label>
 <input type="text" id="recherche_dans_le_sujet" name="recherche_dans_le_sujet">
+<p>Vous pouvez mettre par exemple "lib+consc" pour rechercher tous les sujets qui contiennent "lib" (pour "liberté", "libération", "libérer"…) et qui contiennent "consc" (pour "conscient", "conscience", "inconscient" …</p>
 </div>
   <div id="content"></div>
 </body>

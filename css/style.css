@@ -19,6 +19,13 @@ margin-bottom:30px;
     margin-left:40%;
 }
 
+#recherches p{
+  max-width:800px;
+  margin:20px auto;
+  font-size:0.9em;
+  font-style:italic;
+}
+
   table {
     text-align: center;
     line-height: 30px;
