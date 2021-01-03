@@ -26,6 +26,12 @@ margin-bottom:30px;
   font-style:italic;
 }
 
+#recherches p:last-child{
+  text-align:center;
+  font-style:normal;
+  font-size:0.8em;
+}
+
   table {
     text-align: center;
     line-height: 30px;
