@@ -47,7 +47,7 @@
         });
   </script>
 </head>
-<body>
+<body id="explications">
 <h1>Sujets d'explication donnés au baccalauréat</h1>
 <div id="recherches">
 <label for="recherche_dans_le_sujet">Rechercher dans le sujet :</label>
@@ -58,22 +58,17 @@
   <div id="content"></div>
 </body>
 <script>
-    let input = document.querySelector('input');
-    input.oninput = handleInput;
-    function handleInput(e) {
-        search = e.target.value;
-        search_items=search.split('+');
-        pattern = '';  
-        search_items.forEach(search_item => {
-            pattern=pattern+'(?=.*'+search_item+')';
-        });
-        
-        regex=new RegExp(pattern);
-
+    var input = document.getElementById('recherche_dans_le_sujet');
+    let checker = (arr, target) => target.every(v => arr.includes(v));
+    input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        search = event.target.value;
+        search_items=search.split('+');    
         table_body='<tbody>';
             rows.forEach(element => {
                 cellules=element[0].split('\t');
-                if(cellules.toString().match(regex)) {
+                if(checker(cellules[4],search_items)) {
                     table_body=table_body+'<tr>';
                     cellules.forEach(cell => {
                         table_body=table_body+'<td>'+cell+'</td>';
@@ -84,6 +79,10 @@
         table_body=table_body+'</tbody>';
         content=table_start+table_header+table_body+table_end;
         document.getElementById("content").innerHTML = content;
+        }
+    });
+    function handleInput(e) {
+        
     }
 </script>
 </html>

@@ -45,19 +45,45 @@ margin-bottom:30px;
     max-width:1200px;
   }
 
-  thead tr:first-child {
+ #explications td:last-child{
+   text-align:justify;
+ }
+
+ br {
+  display: block;
+  margin: 5px 0;
+  content: "";
+}
+
+thead tr:first-child {
     background: #ed1c40;
     color: #fff;
     border: none;
   }
 
-th:nth-child(1), th:nth-child(2) {
+#dissertations th:nth-child(1) {
 width:100px!important;
 }
-th:nth-child(3), th:nth-child(4) {
+#dissertations th:nth-child(2) {
+  width:120px!important;
+}
+
+#dissertations th:nth-child(3), #dissertations th:nth-child(4) {
     width:200px!important;
 }
-  
+ 
+
+#explications th:nth-child(1), #explications th:nth-child(2) {
+  width:50px!important;
+  }
+#explications th:nth-child(3){
+      width:145px!important;
+  }
+#explications th:nth-child(4) {
+    width:150px!important;
+}
+
+
   th:first-child,
   td:first-child {
     padding: 0 15px 0 20px;
