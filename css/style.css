@@ -91,6 +91,10 @@ width:100px!important;
     width:150px!important;
 }
 
+#explications b{
+  font-weight: 500;
+}
+
 
   th:first-child,
   td:first-child {
