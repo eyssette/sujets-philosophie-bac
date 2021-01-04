@@ -10,7 +10,7 @@ table_start = "<table>";
 table_header = "<thead><tr>";
 table_end = "</table>";
 Papa.parse(
-  "https://raw.githubusercontent.com/eyssette/sujets_du_bac-philosophie/master/dissertations.tsv",
+  "https://raw.githubusercontent.com/eyssette/sujets_du_bac-philosophie/main/data/dissertations.tsv",
   {
     download: true,
     header: false,
