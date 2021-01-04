@@ -62,8 +62,7 @@ input.addEventListener("keyup", function (event) {
       }
     });
     table_body = table_body + "</tbody>";
-    content = table_start + table_header + table_body + table_end;
-    document.getElementById("content").innerHTML = content;
+    document.getElementsByTagName("tbody")[0].innerHTML = table_body;
   }
 });
 
