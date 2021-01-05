@@ -110,6 +110,10 @@ thead tr:first-child {
   font-weight: 600;
 }
 
+#explications strong {
+  font-weight: 600;
+}
+
 th:first-child,
 td:first-child {
   padding: 0 15px 0 20px;
