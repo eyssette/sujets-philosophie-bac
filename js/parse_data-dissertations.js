@@ -26,7 +26,6 @@ Papa.parse(
       table_body = "<tbody>";
       rows.forEach((element) => {
         recherche = document.getElementById("recherche_dans_le_sujet").value;
-        console.log(recherche);
         table_body = table_body + "<tr>";
         cellules = element[0].split("\t");
         cellules.forEach((cell) => {
