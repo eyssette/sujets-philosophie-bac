@@ -9,7 +9,7 @@ var table_body;
 table_start = "<table>";
 table_header = "<thead><tr>";
 table_end = "</table>";
-Papa.parse("https://raw.githubusercontent.com/eyssette/sujets_du_bac-philosophie/main/data/explications.tsv", {
+Papa.parse("https://raw.githubusercontent.com/eyssette/sujets-philosophie-bac/main/data/explications.tsv", {
 	download: true,
 	header: false,
 	delimiter: "    ",
