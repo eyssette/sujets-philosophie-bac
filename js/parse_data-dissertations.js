@@ -43,7 +43,11 @@ let input = document.querySelector("input");
 input.oninput = handleInput;
 
 function handleInput(e) {
-  search = e.target.value;
+  var search = input.value;
+  if(this.timer) {
+		window.clearTimeout(this.timer);
+	}
+	this.timer = window.setTimeout(function() {
   search_items = search.split("+");
   pattern = "";
   search_items.forEach((search_item) => {
@@ -65,4 +69,13 @@ function handleInput(e) {
   table_body = table_body + "</tbody>";
   content = table_start + table_header + table_body + table_end;
   document.getElementById("content").innerHTML = content;
+}, 150);
+}
+
+function delay(fn, ms) {
+	let timer = 0
+	return function(...args) {
+		clearTimeout(timer)
+		timer = setTimeout(fn.bind(this, ...args), ms || 0)
+	}
 }
