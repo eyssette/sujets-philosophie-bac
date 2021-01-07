@@ -41,7 +41,7 @@ input.oninput = handleInput;
 let checker = (arr, target) => target.every((v) => arr.includes(v));
 
 function handleInput(e) {
-	var search = input.value;
+	var search = input.value.toLowerCase();
 	if(this.timer) {
 		window.clearTimeout(this.timer);
 	}
@@ -50,7 +50,7 @@ function handleInput(e) {
 		table_body = "<tbody>";
 		rows.forEach((element) => {
 			cellules = element[0].split("\t");
-			if(checker(cellules[4], search_items)) {
+			if(checker(cellules[4].toLowerCase(), search_items)) {
 				table_body = table_body + "<tr>";
 				cellules.forEach((cell) => {
 					table_body = table_body + "<td>" + cell + "</td>";
