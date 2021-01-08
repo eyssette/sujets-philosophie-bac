@@ -161,3 +161,7 @@ td:last-child {
 .delete:hover {
   color: #dc2a2a;
 }
+
+mark{
+  background: #FFF6B3;
+}

@@ -42,7 +42,7 @@ let checker = (arr, target) => target.every((v) => arr.includes(v));
 
 function handleInput(e) {
 	var search = input.value.toLowerCase();
-	if(this.timer) {
+	if (this.timer) {
 		window.clearTimeout(this.timer);
 	}
 	this.timer = window.setTimeout(function() {
@@ -50,7 +50,7 @@ function handleInput(e) {
 		table_body = "<tbody>";
 		rows.forEach((element) => {
 			cellules = element[0].split("\t");
-			if(checker(cellules[4].toLowerCase(), search_items)) {
+			if (checker(cellules[4].toLowerCase(), search_items)) {
 				table_body = table_body + "<tr>";
 				cellules.forEach((cell) => {
 					table_body = table_body + "<td>" + cell + "</td>";
@@ -60,5 +60,10 @@ function handleInput(e) {
 		});
 		table_body = table_body + "</tbody>";
 		document.getElementsByTagName("tbody")[0].innerHTML = table_body;
-	}, 200);
+		var context = document.getElementById("content");
+		var instance = new Mark(context);
+		instance.mark(search_items, options = {
+			"accuracy": "complementary"
+		});
+	}, 300);
 }
