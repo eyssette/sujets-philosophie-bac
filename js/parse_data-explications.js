@@ -63,7 +63,7 @@ function handleInput(e) {
 		var context = document.getElementById("content");
 		var instance = new Mark(context);
 		instance.mark(search_items, options = {
-			"accuracy": "complementary"
+			"accuracy": "complementary", "separateWordSearch": false
 		});
 	}, 300);
 }
