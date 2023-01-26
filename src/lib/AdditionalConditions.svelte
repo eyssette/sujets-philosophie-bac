@@ -56,7 +56,6 @@
 					if(!textToSearch.includes(condition[1])) {
 						textToSearch = textToSearch + condition[1];
 					}
-					console.log(textToSearch);
 				} else {
 					textToSearch = textToSearch.replace(condition[1], '');
 				}
