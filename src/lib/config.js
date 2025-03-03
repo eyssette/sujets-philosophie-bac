@@ -19,8 +19,8 @@ export const scoreDisplay = false;
 
 export const activateFilters = true;
 
-export const textToSearchDefaultSmallScreen = "2021";
-export const textToSearchDefault = "2021";
+export const textToSearchDefaultSmallScreen = "2024";
+export const textToSearchDefault = "2024";
 
 /* Pour réorganiser les données (notamment pour faire une version différente sur mobile) */
 export const reorganizeData = true;
